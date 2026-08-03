@@ -4,13 +4,13 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  
 
-<title>디지털 명함</title>
+<title>Volvo 하남전시장 곽지명 대리</title>
 
  
 
@@ -26,15 +26,15 @@ padding:0;
 
 box-sizing:border-box;
 
+font-family:'Segoe UI',sans-serif;
+
 }
 
  
 
 body{
 
-font-family:Segoe UI,sans-serif;
-
-background:#f2f4f7;
+background:#f5f5f5;
 
 color:#333;
 
@@ -70,45 +70,67 @@ padding:30px;
 
 display:flex;
 
-gap:30px;
-
 flex-wrap:wrap;
 
+gap:30px;
+
+justify-content:space-between;
+
 }
 
  
 
-.company-info{
+.company{
 
 flex:1;
 
-min-width:220px;
+min-width:250px;
 
 }
 
  
 
-.person-info{
+.company h3{
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+ 
+
+.company p{
+
+line-height:1.8;
+
+font-size:14px;
+
+}
+
+ 
+
+.person{
 
 flex:1;
 
-min-width:220px;
+min-width:250px;
 
 }
 
  
 
-.person-info h1{
+.person h1{
 
 font-size:34px;
 
-margin-bottom:10px;
+margin-bottom:5px;
 
 }
 
  
 
-.person-info h2{
+.person h2{
 
 font-size:18px;
 
@@ -120,11 +142,11 @@ margin-bottom:15px;
 
  
 
-.person-info p,
-
-.company-info p{
+.person p{
 
 line-height:1.8;
+
+font-size:14px;
 
 }
 
@@ -154,7 +176,7 @@ padding:25px;
 
  
 
-.btn-grid{
+.buttons{
 
 display:grid;
 
@@ -170,37 +192,67 @@ gap:10px;
 
 display:block;
 
-text-align:center;
+padding:14px;
 
 text-decoration:none;
 
-padding:14px;
+text-align:center;
 
 border-radius:8px;
 
-color:#fff;
-
-font-weight:700;
+font-weight:bold;
 
 }
 
  
 
-.kakao{background:#FEE500;color:#111;}
+.kakao{
 
-.map{background:#03C75A;}
+background:#FEE500;
 
-.reserve{background:#0078D4;}
+color:#111;
+
+}
+
+ 
+
+.map{
+
+background:#03C75A;
+
+color:white;
+
+}
+
+ 
+
+.call{
+
+background:#0078D4;
+
+color:white;
+
+}
+
+ 
 
 .full-btn{
 
-background:#222;
-
-color:#fff;
-
-width:100%;
+display:block;
 
 margin-top:15px;
+
+padding:14px;
+
+text-align:center;
+
+background:#222;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:8px;
 
 }
 
@@ -210,7 +262,7 @@ margin-top:15px;
 
 display:block;
 
-margin:25px 0 15px;
+margin-bottom:15px;
 
 font-size:24px;
 
@@ -220,45 +272,41 @@ font-weight:bold;
 
  
 
-.profile-box{
+.profile-area{
 
 display:flex;
 
+flex-wrap:wrap;
+
 gap:20px;
 
-flex-wrap:wrap;
+align-items:flex-start;
 
 }
 
  
 
-.profile-box img{
+.profile-area img{
 
 width:220px;
 
-border-radius:10px;
+border-radius:12px;
 
 }
 
  
 
-.profile-text{
+.intro{
 
 flex:1;
 
-}
+background:#f7f7f7;
 
- 
+padding:20px;
 
-.profile-text textarea{
+border-radius:12px;
 
-width:100%;
-
-min-height:200px;
-
-padding:15px;
-
-resize:none;
+line-height:1.8;
 
 }
 
@@ -268,39 +316,31 @@ resize:none;
 
 width:100%;
 
-display:block;
+border-radius:10px;
+
+margin-bottom:15px;
 
 }
 
  
 
-.video iframe{
-
-width:100%;
-
-height:500px;
-
-}
-
- 
-
-.channels{
-
-list-style:none;
+.social{
 
 display:flex;
 
 gap:15px;
 
+flex-wrap:wrap;
+
 }
 
  
 
-.channels a{
-
-text-decoration:none;
+.social a{
 
 color:#0078D4;
+
+text-decoration:none;
 
 font-weight:bold;
 
@@ -312,29 +352,13 @@ footer{
 
 background:#111;
 
-color:#fff;
+color:white;
 
 text-align:center;
 
 padding:30px;
 
-}
-
- 
-
-.share-box{
-
 margin-top:20px;
-
-}
-
- 
-
-.share-box input{
-
-width:100%;
-
-padding:10px;
 
 }
 
@@ -344,17 +368,19 @@ padding:10px;
 
 width:100%;
 
-margin-top:10px;
-
-padding:12px;
-
-border:none;
+padding:15px;
 
 background:#0078D4;
 
 color:white;
 
+border:none;
+
+border-radius:8px;
+
 cursor:pointer;
+
+font-size:15px;
 
 }
 
@@ -364,7 +390,7 @@ cursor:pointer;
 
  
 
-.btn-grid{
+.buttons{
 
 grid-template-columns:1fr;
 
@@ -372,9 +398,19 @@ grid-template-columns:1fr;
 
  
 
-.video iframe{
+.profile-area{
 
-height:250px;
+flex-direction:column;
+
+}
+
+ 
+
+.profile-area img{
+
+width:100%;
+
+max-width:300px;
 
 }
 
@@ -398,10 +434,6 @@ height:250px;
 
  
 
-<!-- 명함 -->
-
- 
-
 <div class="business-card">
 
  
@@ -410,53 +442,31 @@ height:250px;
 
  
 
-<div class="company-info">
+<div class="company">
+
+ 
+
+<h3>코오롱 오토모티브</h3>
 
  
 
 <p>
 
-코오롱오토모티브㈜<br>
-
-Volvo 공식 딜러
-
-</p>
+Volvo 공식 딜러<br><br>
 
  
-
-<br>
-
- 
-
-<p>
 
 주소<br>
 
-경기도 하남시 미사대로 750 스타필드 2층
-
-</p>
+경기도 하남시 미사대로 750 스타필드 2층<br><br>
 
  
-
-<br>
-
- 
-
-<p>
 
 홈페이지<br>
 
-https://kolon.volvocars.co.kr/
-
-</p>
+https://kolon.volvocars.co.kr/<br><br>
 
  
-
-<br>
-
- 
-
-<p>
 
 휴대폰 : 010-8000-0713<br>
 
@@ -472,39 +482,23 @@ https://kolon.volvocars.co.kr/
 
  
 
-<div class="person-info">
+<div class="person">
 
  
 
 <h1>곽지명</h1>
 
- 
-
-<h2>대리</h2>
-
- 
-<!--
-<p>
-
-주요 자격 또는 경력<br>
-
-수상 내역<br>
-
-전문 분야
-
-</p>
--->
- 
-
-<br>
+<h2>Volvo 하남전시장 | 대리</h2>
 
  
 
 <p>
 
-Volvo 하남전시장<br>
+고객 맞춤 차량 상담<br>
 
-대리
+Volvo 신차 구매 상담<br>
+
+시승 및 차량 안내
 
 </p>
 
@@ -520,17 +514,13 @@ Volvo 하남전시장<br>
 
 <div class="logo">
 
-volvo_logo.png
+<img src="logo.png" alt="Volvo Logo">
 
 </div>
 
  
 
 </div>
-
- 
-
-<!-- 빠른 링크 -->
 
  
 
@@ -538,101 +528,35 @@ volvo_logo.png
 
  
 
-<div class="btn-grid">
+<div class="buttons">
 
  
 
 #
 
- 
-
-#
-
- 
-
-#
-
-상담 신청
+카카오톡 상담
 
 </a>
 
  
 
-</div>
+aver.com/p/entry/place/1740610951?c=15.00,0,0,0,dh"
 
- 
-<a href="tel:010-8000-0713" class="btn_full"><img src="/icon_call.png" alt="">전화걸기</a>
+target="_blank"
+
+class="btn map">
+
+전시장 위치
 
 </a>
 
  
 
-</div>
+00713"
 
- 
+class="btn call">
 
-<!-- 자기소개 -->
-
- 
-
-<div class="section">
-
- 
-
-<span class="title">
-
-자기소개
-
-</span>
-
- 
-
-<div class="profile-box">
-
- 
-
-<div class="pro_con">
-                    <img src="/Profile.jpg" alt="">                </div>
-
- 
-
-<div class="profile-text">
-
- 
-
-<textarea readonly>
-
-안녕하세요.
-
-Volvo 하남전시장
-곽지명 대리입니다.
-  
-</textarea>
-
- 
-
-</div>
-
- 
-
-</div>
-
- 
-
-</div>
-
- 
-
-<!-- SNS -->
-
- 
-
-<div class="section">
-
- 
-
-<a href="https://www.instagram.com/car_isooma__030/" class="btn_full marbtm_32">
-<img src="/icon_people.png" alt="">개인 SNS 채널</a>
+전화걸기
 
 </a>
 
@@ -642,7 +566,7 @@ Volvo 하남전시장
 
  
 
-<!-- 배너 -->
+</div>
 
  
 
@@ -650,43 +574,39 @@ Volvo 하남전시장
 
  
 
-<span class="title">
-
-주요 자료
-
-</span>
+<h3 class="title">자기소개</h3>
 
  
 
-<div class="banner">
-
-banner1.jpg
-
-</div>
+<div class="profile-area">
 
  
 
-<br>
+<img src="profile.jpg" alt="곽지명">
 
  
 
-<div class="banner">
-
-2.jpg">
-
-</div>
+<div class="intro">
 
  
 
-<br>
+안녕하세요.<br><br>
 
  
 
-<div class="banner">
+Volvo 하남전시장 곽지명 대리입니다.<br><br>
 
-banner3.jpg
+ 
 
-</div>
+볼보 차량에 대한 전문적인 상담과
+
+고객 맞춤형 차량 구매 컨설팅을 제공하고 있습니다.<br>
+
+ 
+
+시승 예약, 차량 구매, 금융 프로그램,
+
+차량 인도까지 책임감 있게 안내드리겠습니다.
 
  
 
@@ -694,7 +614,11 @@ banner3.jpg
 
  
 
-<!-- 브로셔 -->
+</div>
+
+ 
+
+</div>
 
  
 
@@ -702,10 +626,74 @@ banner3.jpg
 
  
 
-brochure.pdf class="btn full-btn">
+<a
+
+href=https://www.instagram.com/car_isooma__030
+
+target="_blank"
+
+class="full-btn">
+
+ 
+
+개인 SNS 채널 (Instagram)
+
+ 
+
+</a>
+
+ 
+
+</div>
+
+ 
+
+<div class="section">
+
+ 
+
+<h3 class="title">전시장 및 브랜드 정보</h3>
+
+ 
+
+<div class="banner">
+
+ 
+
+" alt="Banner 1">
+
+ 
+
+" alt="Banner 2">
+
+ 
+
+<img src="banner3.jpg" alt="Banner 3">
+
+ 
+
+</div>
+
+ 
+
+</div>
+
+ 
+
+<div class="section">
+
+ 
+
+#
+
+ 
 
 카탈로그 다운로드
 
+(추후 PDF 연결)
+
+ 
+
 </a>
 
  
@@ -714,27 +702,31 @@ brochure.pdf class="btn full-btn">
 
  
 
-<!-- 영상 -->
+<div class="section">
 
  
 
-<div class="section video">
+<h3 class="title">공식채널</h3>
 
  
 
-<span class="title">
-
-소개 영상
-
-</span>
+<div class="social">
 
  
 
-/VIDEO_ID"
+.co.kr/" target="_blank">
 
-allowfullscreen>
+Volvo 공식 홈페이지
 
-</iframe>
+</a>
+
+ 
+
+<a href=https://www.k>
+
+Instagram
+
+</a>
 
  
 
@@ -742,7 +734,7 @@ allowfullscreen>
 
  
 
-<!-- 공유 -->
+</div>
 
  
 
@@ -750,77 +742,11 @@ allowfullscreen>
 
  
 
-<span class="title">
+<button class="share-btn" onclick="copyLink()">
 
-링크 공유
-
-</span>
-
- 
-
-<div class="share-box">
-
- 
-
-<input
-
-id="pageUrl"
-
-readonly>
-
- 
-
-<button
-
-class="share-btn"
-
-onclick="copyLink()">
-
-링크 복사
+명함 링크 공유하기
 
 </button>
-
- 
-
-</div>
-
- 
-
-</div>
-
- 
-
-<!-- 공식채널 -->
-
- 
-
-<div class="section">
-
- 
-
-<span class="title">
-
-공식 채널
-
-</span>
-
- 
-
-<ul class="channels">
-
- 
-
-<li>#YouTube</a></li>
-
-<li>#Blog</a></li>
-
-<li>#Instagram</a></li>
-
-<li>#LinkedIn</a></li>
-
- 
-
-</ul>
 
  
 
@@ -832,15 +758,17 @@ onclick="copyLink()">
 
  
 
-<img
-
-src="company-logo.png"
-
-style="max-width:180px">
+<img src="logo.png" alt="logo" style="max-width:120px;"><br><br>
 
  
 
-<p>Copyright </footer>
+COPYRIGHT © KOLON AUTOMOTIVE<br>
+
+ALL RIGHTS RESERVED
+
+ 
+
+</footer>
 
  
 
@@ -852,25 +780,15 @@ style="max-width:180px">
 
  
 
-document.getElementById("pageUrl").value =
-
-window.location.href;
-
- 
-
 function copyLink(){
 
  
 
-navigator.clipboard.writeText(
-
-window.location.href
-
-);
+navigator.clipboard.writeText(window.location.href);
 
  
 
-alert("링크가 복사되었습니다.");
+alert("명함 링크가 복사되었습니다.");
 
  
 
@@ -883,5 +801,7 @@ alert("링크가 복사되었습니다.");
  
 
 </body>
+
+ 
 
 </html>
